@@ -1,0 +1,28 @@
+<center>
+<div class = "topBar">
+  <button class = "hoverBox" onclick = "if (document.getElementById('colorDropdown').style.display == 'none') {document.getElementById('colorDropdown').style.display = 'block'; document.getElementById('secondDropdown').style.display = 'none';} else {document.getElementById('colorDropdown').style.display = 'none';}">Thema</button>
+  <button class = "hoverBox" onclick = "if (document.getElementById('secondDropdown').style.display == 'none') {document.getElementById('secondDropdown').style.display = 'block'; document.getElementById('colorDropdown').style.display = 'none';} else {document.getElementById('secondDropdown').style.display = 'none';}">Rubriken</button>
+</div>
+<div class = "box" style = "display: none; position: fixed; z-index: 5; margin-top: 100px;" id = "colorDropdown">
+<!--  <h  style = "font-size: 64pt;">Farben</h><br>-->
+  <button class = "hoverBarBox" onclick = "changeColors('red')">ROT</button><br>
+  <button class = "hoverBarBox" onclick = "changeColors('orange')">ORANGE</button><br>
+  <button class = "hoverBarBox" onclick = "changeColors('yellow')">GELB</button><br>
+  <button class = "hoverBarBox" onclick = "changeColors('green')">GRUEN</button><br>
+  <button class = "hoverBarBox" onclick = "changeColors('cyan')">HELLBLAU</button><br>
+  <button class = "hoverBarBox" onclick = "changeColors('blue')">BLAU</button><br>
+  <button class = "hoverBarBox" onclick = "changeColors('magenta')">MAGENTA</button><br>
+  <button class = "hoverBarBox" onclick = "changeColors('dark')">GRAU</button><br>
+</div>
+<div class = "box" style = "display: none; position: fixed; z-index: 5; margin-top: 100px;" id = "secondDropdown">
+<!--  <h  style = "font-size: 64pt;">Rubriken</h><br>-->
+  <button class = "hoverBarBox">Jarnes Kram Nr. 1</button><br>
+  <button class = "hoverBarBox">Jarnes Kram Nr. 2</button><br>
+  <button class = "hoverBarBox">Jarnes Kram Nr. 3</button><br>
+  <button class = "hoverBarBox">Jarnes Kram Nr. 4</button><br>
+  <button class = "hoverBarBox">Jarnes Kram Nr. 5</button><br>
+</div>
+</center>
+<br>
+<br>
+<br>

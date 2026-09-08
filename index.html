@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "style.css">
+<title>Fungames</title>
+</head>
+<body>
+<div id="defaultStuff"></div>
+<script>
+  fetch('./default.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('defaultStuff').innerHTML = data;
+    });
+</script>
+<center>
+<div class = "box">
+<h style = "font-size: 32pt;">Unglaublich - Illegaler Handel mit Suessigkeiten auf dem Pausenhof aufgedeckt.</h><br>
+Gestern kam es zu einem Zwischenfall.<br>Jarne Dittberner wurde mit illegalen Suessigkeiten ertappt.<br>
+<button class = "hoverBox" style = "border: 5px solid var(--hCol);" onclick = "openLink('suess.html')">mehr erfahren...</button>
+</div>
+</center>
+<!--<div id = "loginBox" class = "loginContainer" style = "display: none;">
+  <div class = "box" style = "margin: 0px; box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.3);">
+  <h style = "font-size: 48pt;">Anmelden</h>
+  <input type = "text" class = "textBox"></input>
+  <input type = "text"></input>
+  <button class = "hoverBox" style = "font-size: 32pt; position: absolute; top: 0px; right: 0px;" onclick = "hideLogin()">X</button><br>
+  </div>
+</div>-->
+</body>
+<script>
+const colorSets = {
+  "red":['#733', '#A77', '#CAA'],
+  "orange":['#753', '#A97', '#CBA'],
+  "yellow":['#773', '#AA7', '#CCA'],
+  "green":['#373', '#7A7', '#ACA'],
+  "cyan":['#377', '#7AA', '#ACC'],
+  "blue":['#337', '#77A', '#AAC'],
+  "magenta":['#737', '#A7A', '#CAC'],
+  "dark":['#333', '#777', '#AAA']
+}
+function changeColors(cSet) {
+  document.getElementById("colorDropdown").style.display = "none";
+  document.documentElement.style.setProperty('--bgCol', colorSets[cSet][0]);
+  document.documentElement.style.setProperty('--fgCol', colorSets[cSet][1]);
+  document.documentElement.style.setProperty('--hCol', colorSets[cSet][2]);
+}
+function showLogin() {
+  document.getElementById("loginBox").style.display = "flex";
+}
+function hideLogin() {
+  document.getElementById("loginBox").style.display = "none";
+}
+function openLink(lnk) {
+  open(lnk, "_self");
+}
+</script>
+</html>
+
